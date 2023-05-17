@@ -195,6 +195,7 @@
                 star.material = starMaterial;
                 const light = new BABYLON.PointLight("pointLight", new BABYLON.Vector3(0, 0, 0), scene);
                 light.diffuse = new BABYLON.Color3(systemData[0].color[0], systemData[0].color[1], systemData[0].color[2]);
+                light.specular = new BABYLON.Color3(systemData[0].color[0], systemData[0].color[1], systemData[0].color[2]);
                 starMaterial.diffuseColor = new BABYLON.Color3(systemData[0].color[0], systemData[0].color[1], systemData[0].color[2]);
                 starMaterial.specularColor = new BABYLON.Color3(systemData[0].color[0], systemData[0].color[1], systemData[0].color[2]);
             })
@@ -222,7 +223,7 @@
             camera.attachControl(canvas, true);
             camera.panningSensibility = 0;
             // const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
-            var light0 = new BABYLON.HemisphericLight("light0", new BABYLON.Vector3(0, 1, 0), scene);
+            // var light0 = new BABYLON.HemisphericLight("light0", new BABYLON.Vector3(0, 1, 0), scene);
 
             const gl = new BABYLON.GlowLayer("glow", scene);
             const hl = new BABYLON.HighlightLayer("hl1", scene);
